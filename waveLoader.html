@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Loader</title>
+    </head>
+    <body>
+        <style>
+            .container{
+                display: flex;
+                column-gap: 4px;
+            }
+
+            .animate-stretch{
+                height: 12px;
+                width: 6px;
+                border-radius: 3px;
+                background-color: blue;
+                animation: stretch 5s linear infinite
+            }
+
+            @keyframes stretch {
+                0%{}
+                25%{transform:scaleY(1.5);}
+                50%{transform: scaleY(1);}
+                75%{transform:scaleY(0.5);}
+                100%{transform:scaleY(1);}
+            }
+
+            .animate-stretch:nth-child(2){
+                animation-delay: 1s;
+            }
+
+            .animate-stretch:nth-child(3){
+                animation-delay: 2s;
+            }
+
+            .animate-stretch:nth-child(4){
+                animation-delay: 3s;
+            }
+
+            .animate-stretch:nth-child(5){
+                animation-delay: 4s;
+            }
+
+        </style>
+        <div class="container">
+            <div class="animate-stretch"></div>
+            <div class="animate-stretch"></div>
+            <div class="animate-stretch"></div>
+            <div class="animate-stretch"></div>
+            <div class="animate-stretch"></div>
+        </div>
+    </body>
+</html>
